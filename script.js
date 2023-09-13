@@ -3,11 +3,27 @@ document.addEventListener("DOMContentLoaded", function(){
     const minutes = document.getElementById("minutes");
     const seconds = document.getElementById("seconds");
     const StartReset = document.getElementById("StartReset");
+    const workTime = document.getElementById("workTime");
+    const pauseTime = document.getElementById("pauseTime");
     let intervalWork = setInterval(function(){});
     let intervalPause = setInterval(function(){});
 
+
     defMinWork = 25;
     defMinPause = 5;
+
+    workTime.addEventListener("change",function(){
+        defMinWork = workTime.value;
+        if(workTime.value<10){
+            minutes.textContent = "0"+workTime.value;
+        }else{
+            minutes.textContent = workTime.value;
+        }
+    });
+
+    pauseTime.addEventListener("change",function(){
+        defMinPause = pauseTime.value;
+    });
 
 
     StartReset.addEventListener("click",function(){
@@ -77,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         state.textContent = "Pause";
 
-        let min = defMinPause;
+        let min = defMinPause-1;
         let sec = 59;
 
         if(min<10){
