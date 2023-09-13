@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function(){
     let intervalWork = setInterval(function(){});
     let intervalPause = setInterval(function(){});
 
+    defMinWork = 0;
+    defMinPause = 5;
+
 
     StartReset.addEventListener("click",function(){
         if(StartReset.textContent == "Démarrer"){
@@ -15,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
             clearInterval(intervalPause);
             state.textContent = "Travail";
             StartReset.textContent = "Démarrer";
-            minutes.textContent = "25";
+            minutes.textContent = defMinWork;
             seconds.textContent = "00";
         }
     });
@@ -25,18 +28,36 @@ document.addEventListener("DOMContentLoaded", function(){
         state.textContent = "Travail";
         StartReset.textContent = "Réinitialiser";
 
-        let min = 0;
+        let min = defMinWork;
         let sec = 10;
 
-        minutes.textContent = min;
-        seconds.textContent = sec;
+        if(min<10){
+            minutes.textContent = "0"+min; 
+        }else{
+            minutes.textContent = min;
+        }
+
+        if(sec<10){
+            seconds.textContent = "0"+sec; 
+        }else{
+            seconds.textContent = sec;
+        }
 
         function everySecond(){
 
             sec=sec-1;
 
-            minutes.textContent = min;
-            seconds.textContent = sec;
+            if(min<10){
+                minutes.textContent = "0"+min; 
+            }else{
+                minutes.textContent = min;
+            }
+    
+            if(sec<10){
+                seconds.textContent = "0"+sec; 
+            }else{
+                seconds.textContent = sec;
+            }
 
             if(sec==0 && min==0){
                 clearInterval(intervalWork);
@@ -56,17 +77,36 @@ document.addEventListener("DOMContentLoaded", function(){
 
         state.textContent = "Pause";
 
-        let min = 4;
+        let min = defMinPause;
         let sec = 59;
-        minutes.textContent = min;
-        seconds.textContent = sec;
+
+        if(min<10){
+            minutes.textContent = "0"+min; 
+        }else{
+            minutes.textContent = min;
+        }
+
+        if(sec<10){
+            seconds.textContent = "0"+sec; 
+        }else{
+            seconds.textContent = sec;
+        }
 
         function everySecond(){
 
             sec=sec-1;
 
-            minutes.textContent = min;
-            seconds.textContent = sec;
+            if(min<10){
+                minutes.textContent = "0"+min; 
+            }else{
+                minutes.textContent = min;
+            }
+    
+            if(sec<10){
+                seconds.textContent = "0"+sec; 
+            }else{
+                seconds.textContent = sec;
+            }
 
             if(sec==0 && min==0){
                 clearInterval(intervalPause);
