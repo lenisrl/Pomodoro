@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function(){
         state.textContent = "Travail";
         StartReset.textContent = "Réinitialiser";
 
-        let min = defMinWork;
-        let sec = 10;
+        let min = defMinWork-1;
+        let sec = 59;
 
         if(min<10){
             minutes.textContent = "0"+min; 
