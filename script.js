@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let intervalWork = setInterval(function(){});
     let intervalPause = setInterval(function(){});
 
-    defMinWork = 0;
+    defMinWork = 25;
     defMinPause = 5;
 
 
