@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", function(){
+
     const state = document.getElementById("state");
     const minutes = document.getElementById("minutes");
     const seconds = document.getElementById("seconds");
     const StartReset = document.getElementById("StartReset");
     const workTime = document.getElementById("workTime");
     const pauseTime = document.getElementById("pauseTime");
+
+
     let intervalWork = setInterval(function(){});
     let intervalPause = setInterval(function(){});
 
@@ -32,8 +35,10 @@ document.addEventListener("DOMContentLoaded", function(){
         }else{
             clearInterval(intervalWork);
             clearInterval(intervalPause);
+
             state.textContent = "Travail";
             StartReset.textContent = "Démarrer";
+            
             minutes.textContent = defMinWork;
             seconds.textContent = "00";
         }
