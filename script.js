@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const workTime = document.getElementById("workTime");
     const pauseTime = document.getElementById("pauseTime");
 
+    var timerContainer = document.querySelector('.timer-container');
 
     let intervalWork = setInterval(function(){});
     let intervalPause = setInterval(function(){});
@@ -30,9 +31,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     StartReset.addEventListener("click",function(){
+
+        timerContainer.style.backgroundColor = "white";
+        timerContainer.style.color = "black";
         if(StartReset.textContent == "Démarrer"){
             workCountDown();
         }else{
+            
+            workTime.disabled = false;
+            pauseTime.disabled = false;
             clearInterval(intervalWork);
             clearInterval(intervalPause);
 
@@ -46,8 +53,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function workCountDown(){
 
+        timerContainer.style.backgroundColor = "red";
+        timerContainer.style.color = "white";
+
         state.textContent = "Travail";
         StartReset.textContent = "Réinitialiser";
+
+        workTime.disabled = true;
+        pauseTime.disabled = true;
+
 
         let min = defMinWork-1;
         let sec = 59;
@@ -95,6 +109,8 @@ document.addEventListener("DOMContentLoaded", function(){
     };
 
     function pauseCountDown(){
+
+        timerContainer.style.backgroundColor = "green";
 
         state.textContent = "Pause";
 
