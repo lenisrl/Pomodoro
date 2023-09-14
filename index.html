@@ -6,31 +6,31 @@
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1 class="timer-title">Pomodoro Timer</h1>
+        <h1 class="timerTitle">Pomodoro Timer</h1>
     </header>
     <main>
-        <div class="timer-container">
-            <p id="state" class="timer-state">Travail</p>
-            <div class="time-display">
-                <span id="minutes" class="timer-minutes">25</span>:<span id="seconds" class="timer-seconds">00</span>
+        <div class="timerContainer">
+            <p id="state" class="timerState">Travail</p>
+            <div class="timeDisplay">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
             </div>
-            <button id="StartReset" class="timer-button">Démarrer</button>
+            <button id="StartReset" class="timerButton">Démarrer</button>
         </div>
 
-        <div class="time-settings">
-            <div class="work-time">
+        <div class="timeSettings">
+            <div class="workTime">
                 <p>Temps de travail (en minutes) :</p>
-                <input type="number" value="25" id="workTime" class="time-input" min="1" max="99">
+                <input type="number" value="25" id="workTime" class="timeInput" min="1" max="99">
             </div>
-            <div class="pause-time">
+            <div class="pauseTime">
                 <p>Temps de pause (en minutes) :</p>
-                <input type="number" value="5" id="pauseTime" class="time-input" min="1" max="99">
+                <input type="number" value="5" id="pauseTime" class="timeInput" min="1" max="99">
             </div>
         </div>
     </main>

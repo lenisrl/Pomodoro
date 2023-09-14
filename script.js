@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const workTime = document.getElementById("workTime");
     const pauseTime = document.getElementById("pauseTime");
 
-    var timerContainer = document.querySelector('.timer-container');
+    var timerContainer = document.querySelector('.timerContainer');
 
     let intervalWork = setInterval(function(){});
     let intervalPause = setInterval(function(){});
