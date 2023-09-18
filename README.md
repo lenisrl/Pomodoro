@@ -2,40 +2,38 @@
 
 <img src="icon.png" width="100" height="100">
 
-Pomodoro Timer est une application web simple pour la gestion du temps basée sur la technique Pomodoro. Elle vous aide à rester concentré sur vos tâches en alternant entre des périodes de travail et de pause.
+Pomodoro Timer is a simple web application for time management based on the Pomodoro technique. It helps you stay focused on your tasks by alternating between periods of work and breaks.
 
-## Installation
+## Usage
 
-Ouvrez le fichier `index.html` dans votre navigateur web.
+- Open the file `index.html` in your web browser.
 
-## Utilisation
+- The default working time is 25 minutes, but you can adjust it using the slider.
 
-- Le temps de travail par défaut est de 25 minutes, mais vous pouvez le régler à l'aide du curseur.
+- The default pause time is 5 minutes, also adjustable via the slider.
 
-- Le temps de pause par défaut est de 5 minutes, réglable également via le curseur.
+- Click the "Start" button to begin timing.
 
-- Cliquez sur le bouton "Démarrer" pour commencer le minutage.
+- While working, the background will be red.
 
-- Pendant le travail, l'arrière-plan sera rouge.
+- When paused, the background will turn green.
 
-- Pendant la pause, l'arrière-plan deviendra vert.
+- You can reset the timer by clicking on the "Reset" button.
 
-- Vous pouvez réinitialiser le minutage en cliquant sur le bouton "Réinitialiser".
-
-## Aperçu
+## Preview
 
 ![Pomodoro Timer](screenshot.png)
 
-## Technologies utilisées
+## Technologies used
 
 - HTML
 - CSS
 - JavaScript
 
-## Remerciements
+## Acknowledgements
 
-Je tiens à exprimer ma sincère gratitude envers les personnes suivantes pour leur précieuse contribution et leur soutien à ce projet :
+I would like to express my sincere gratitude to the following people for their valuable contribution and support of this project:
 
-- **Mr. Vallot** : Mon professeur, pour ses enseignements et ses conseils tout au long du développement de cette application.
+- **Mr. Vallot**: My teacher, for his teaching and advice throughout the development of this application.
 
-- **Tom Leblais et Hugo Sefrioui** : Mes collègues, pour leur collaboration et leurs idées.
+- **Tom Leblais and Hugo Sefrioui**: My colleagues, for their collaboration and ideas.
