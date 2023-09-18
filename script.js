@@ -17,6 +17,12 @@ document.addEventListener("DOMContentLoaded", function(){
     defMinPause = 5;
 
     workTime.addEventListener("change",function(){
+        if(workTime.value<1){
+            workTime.value = 1;
+        }
+        if(workTime.value>60){
+            workTime.value = 60;
+        }
         defMinWork = workTime.value;
         if(workTime.value<10){
             minutes.textContent = "0"+workTime.value;
@@ -26,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     pauseTime.addEventListener("change",function(){
+        if(pauseTime.value<1){
+            pauseTime.value = 1;
+        }
+        if(pauseTime.value>60){
+            pauseTime.value = 60;
+        }
         defMinPause = pauseTime.value;
     });
 
