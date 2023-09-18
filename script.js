@@ -1,21 +1,26 @@
+// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function(){
 
-    const state = document.getElementById("state");
-    const minutes = document.getElementById("minutes");
-    const seconds = document.getElementById("seconds");
-    const StartReset = document.getElementById("StartReset");
-    const workTime = document.getElementById("workTime");
-    const pauseTime = document.getElementById("pauseTime");
+    // Get references to the HTML elements
+    const state = document.getElementById("state"); // Element to display 'Travail' or 'Pause'
+    const minutes = document.getElementById("minutes"); // Minutes of the timer
+    const seconds = document.getElementById("seconds"); // Seconds of the timer
+    const StartReset = document.getElementById("StartReset"); // Start/Reset button
+    const workTime = document.getElementById("workTime"); // Input for work time
+    const pauseTime = document.getElementById("pauseTime"); // Input for pause time
 
+    // Get a reference to the timer container
     var timerContainer = document.querySelector('.timerContainer');
 
+    // Initialize interval timers (used for countdowns)
     let intervalWork = setInterval(function(){});
     let intervalPause = setInterval(function(){});
 
-
+    // Default work and pause times
     defMinWork = 25;
     defMinPause = 5;
 
+    // Event listener for changes in work time input
     workTime.addEventListener("change",function(){
         if(workTime.value<1){
             workTime.value = 1;
@@ -31,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
+    // Event listener for changes in pause time input
     pauseTime.addEventListener("change",function(){
         if(pauseTime.value<1){
             pauseTime.value = 1;
@@ -41,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function(){
         defMinPause = pauseTime.value;
     });
 
-
+    // Event listener for Start/Reset button
     StartReset.addEventListener("click",function(){
 
         timerContainer.style.backgroundColor = "white";
@@ -63,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
+    // Function to handle the work countdown
     function workCountDown(){
 
         timerContainer.style.backgroundColor = "red";
@@ -73,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
         workTime.disabled = true;
         pauseTime.disabled = true;
-
 
         let min = defMinWork-1;
         let sec = 59;
@@ -120,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function(){
         intervalWork = setInterval(everySecond,1000);
     };
 
+    // Function to handle the pause countdown
     function pauseCountDown(){
 
         timerContainer.style.backgroundColor = "green";
