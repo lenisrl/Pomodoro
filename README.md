@@ -8,9 +8,9 @@ Pomodoro Timer is a simple web application for time management based on the Pomo
 
 - Open the file `index.html` in your web browser.
 
-- The default working time is 25 minutes, but you can adjust it using the slider.
+- The default working time is 25 minutes, but you can adjust it using the field.
 
-- The default pause time is 5 minutes, also adjustable via the slider.
+- The default pause time is 5 minutes, also adjustable via the field.
 
 - Click the "Start" button to begin timing.
 
