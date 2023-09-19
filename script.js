@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         defMinWork = workTime.value;
         if(workTime.value<10){
-            minutes.textContent = "0"+workTime.value;
+            minutes.textContent = parseInt("0"+workTime.value);
         }else{
-            minutes.textContent = workTime.value;
+            minutes.textContent = parseInt(workTime.value);
         }
     });
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if(pauseTime.value>60){
             pauseTime.value = 60;
         }
-        defMinPause = pauseTime.value;
+        defMinPause = parseInt(pauseTime.value);
     });
 
     // Event listener for Start/Reset button
