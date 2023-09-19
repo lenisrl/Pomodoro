@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // Function to handle the work countdown
     function workCountDown(){
 
-        timerContainer.style.backgroundColor = "red";
+        timerContainer.style.backgroundColor = "#be2d2d";
         timerContainer.style.color = "white";
 
         state.textContent = "Travail";
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // Function to handle the pause countdown
     function pauseCountDown(){
 
-        timerContainer.style.backgroundColor = "green";
+        timerContainer.style.backgroundColor = "#368522";
 
         state.textContent = "Pause";
 
